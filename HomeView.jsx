@@ -2,7 +2,7 @@
 const HomeView = ({ onNav, tweaks }) => {
   const SANS = "'IBM Plex Sans Thai', sans-serif";
   const SERIF = "'Cormorant Garamond', Georgia, serif";
-  const [active, setActive] = React.useState('experience');
+  const [active, setActive] = React.useState('build');
 
   const phase = CYCLE_PHASES.find(p => p.id === active);
 
@@ -37,10 +37,10 @@ const HomeView = ({ onNav, tweaks }) => {
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
           <Eyebrow style={{ marginBottom: 14 }}>a theory · march 2026</Eyebrow>
           <h2 style={{ fontFamily: SERIF, fontWeight: 500, fontSize: 'clamp(36px, 4.5vw, 56px)', lineHeight: 1.05, color: '#2C2A24', margin: '0 0 16px', letterSpacing: '-0.015em' }}>
-            The <em>Dynamic Cycle.</em>
+            The well-compounding <em>cycle.</em>
           </h2>
           <p style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 19, lineHeight: 1.5, color: '#5C574D', margin: '0 auto', maxWidth: 540 }}>
-            Three movements that shape a life of meaning. Hover or tap each to explore.
+            Three motions, repeated gently, for a lifetime. Hover or tap each to read more.
           </p>
         </div>
 
