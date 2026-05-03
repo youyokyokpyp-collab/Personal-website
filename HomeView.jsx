@@ -13,7 +13,7 @@ const HomeView = ({ onNav, tweaks }) => {
       <header style={{ padding: '72px 0 56px', textAlign: 'center' }}>
         <Eyebrow style={{ marginBottom: 24 }}>volume i · a private notebook, made public</Eyebrow>
         <h1 style={{ fontFamily: SERIF, fontWeight: 500, fontSize: 'clamp(48px, 7.4vw, 92px)', lineHeight: 1, color: '#2C2A24', margin: '0 0 24px', letterSpacing: '-0.02em' }}>
-          On the slow shape <br/><em>of a well-lived life.</em>
+          Today, I'm happy
         </h1>
         <Ornament glyph="❦"/>
         <p style={{ fontFamily: SERIF, fontStyle: 'italic', fontWeight: 400, fontSize: 22, lineHeight: 1.55, color: '#5C574D', margin: '24px auto 0', maxWidth: 620 }}>
