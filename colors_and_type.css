@@ -1,0 +1,274 @@
+/* Wealthgevity Design System — Colors & Type */
+/* Drop this into any HTML page: <link rel="stylesheet" href="colors_and_type.css"> */
+
+/* IBM Plex Sans Thai — brand-supplied font files */
+@font-face { font-family: 'IBM Plex Sans Thai'; font-weight: 100; font-style: normal; src: url('fonts/IBMPlexSansThai-Thin.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: 'IBM Plex Sans Thai'; font-weight: 200; font-style: normal; src: url('fonts/IBMPlexSansThai-ExtraLight.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: 'IBM Plex Sans Thai'; font-weight: 300; font-style: normal; src: url('fonts/IBMPlexSansThai-Light.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: 'IBM Plex Sans Thai'; font-weight: 400; font-style: normal; src: url('fonts/IBMPlexSansThai-Regular.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: 'IBM Plex Sans Thai'; font-weight: 500; font-style: normal; src: url('fonts/IBMPlexSansThai-Medium.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: 'IBM Plex Sans Thai'; font-weight: 600; font-style: normal; src: url('fonts/IBMPlexSansThai-SemiBold.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: 'IBM Plex Sans Thai'; font-weight: 700; font-style: normal; src: url('fonts/IBMPlexSansThai-Bold.ttf') format('truetype'); font-display: swap; }
+
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ——— Color: paper & ink ——— */
+  --bg: #F8F5EB;          /* warm cream page bg */
+  --paper-2: #F1ECDC;     /* slightly darker cream for tonal sections */
+  --rule: #E5DFCE;        /* hairline borders, dividers */
+
+  --ink: #2C2A24;         /* body text — warm near-black, never pure */
+  --ink-2: #5C574D;       /* secondary text, captions */
+  --ink-3: #8A8275;       /* tertiary text, metadata, ornaments */
+
+  /* ——— Color: sage scale ——— */
+  --sage-100: #D0E9C9;    /* lightest — pull quotes, soft fills */
+  --sage-200: #B6DDCA;    /* mid — buttons, tags, secondary surface */
+  --sage-300: #9AC39C;    /* deepest — primary action, accents */
+
+  /* ——— Semantic color tokens ——— */
+  --color-bg: var(--bg);
+  --color-fg: var(--ink);
+  --color-fg-muted: var(--ink-2);
+  --color-fg-subtle: var(--ink-3);
+  --color-border: var(--rule);
+  --color-accent: var(--sage-300);
+  --color-accent-soft: var(--sage-100);
+  --color-accent-mid: var(--sage-200);
+  --color-link: var(--ink);
+  --color-link-hover: var(--sage-300);
+  --color-surface: var(--bg);
+  --color-surface-2: var(--paper-2);
+
+  /* ——— Type: families ——— */
+  --font-display: 'Mali', 'IBM Plex Sans Thai', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Mali', 'IBM Plex Sans Thai', 'Iowan Old Style', Georgia, serif;
+  --font-ui: 'IBM Plex Sans Thai', sans-serif;
+  --font-serif: 'IBM Plex Sans Thai', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ——— Type: scale ——— */
+  --fs-display-1: clamp(48px, 7vw, 88px);
+  --fs-display-2: clamp(36px, 5vw, 64px);
+  --fs-h1: clamp(36px, 4.5vw, 56px);
+  --fs-h2: clamp(28px, 3vw, 40px);
+  --fs-h3: 24px;
+  --fs-h4: 20px;
+  --fs-body: 18px;
+  --fs-small: 15px;
+  --fs-caption: 13px;
+  --fs-eyebrow: 12px;
+
+  /* ——— Type: line-heights ——— */
+  --lh-tight: 1.05;
+  --lh-snug: 1.2;
+  --lh-normal: 1.45;
+  --lh-relaxed: 1.65;
+
+  /* ——— Spacing scale (4px base) ——— */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+
+  /* ——— Radii ——— */
+  --r-sm: 2px;     /* buttons, tags, inputs */
+  --r-md: 4px;     /* cards, surfaces */
+  --r-lg: 6px;     /* modals */
+  --r-full: 9999px;
+
+  /* ——— Borders ——— */
+  --border-hairline: 1px solid var(--rule);
+  --border-strong: 1px solid var(--ink-3);
+
+  /* ——— Shadows (used sparingly) ——— */
+  --shadow-soft: 0 1px 2px rgba(44, 42, 36, 0.04), 0 4px 16px rgba(44, 42, 36, 0.04);
+  --shadow-pop: 0 2px 4px rgba(44, 42, 36, 0.06), 0 8px 24px rgba(44, 42, 36, 0.06);
+
+  /* ——— Motion ——— */
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+
+  /* ——— Layout ——— */
+  --measure-prose: 660px;
+  --measure-wide: 1100px;
+  --gutter: 24px;
+}
+
+/* ——— Base ——— */
+html, body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ——— Semantic typography ——— */
+.display-1, h1.display, .ds-h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-1);
+  font-weight: 500;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+  margin: 0;
+  color: var(--ink);
+}
+
+h1, .ds-h1-section {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 500;
+  line-height: var(--lh-snug);
+  letter-spacing: -0.005em;
+  text-wrap: pretty;
+  margin: 0 0 var(--sp-4);
+  color: var(--ink);
+}
+
+h2, .ds-h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 500;
+  line-height: var(--lh-snug);
+  text-wrap: pretty;
+  margin: var(--sp-7) 0 var(--sp-3);
+  color: var(--ink);
+}
+
+h3, .ds-h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  margin: var(--sp-6) 0 var(--sp-2);
+  color: var(--ink);
+}
+
+h4, .ds-h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  margin: var(--sp-5) 0 var(--sp-2);
+  color: var(--ink);
+}
+
+p, .ds-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  margin: 0 0 var(--sp-4);
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.lede, p.lede {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-2);
+}
+
+small, .ds-caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  line-height: var(--lh-normal);
+  color: var(--ink-2);
+}
+
+.eyebrow, .ds-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  color: var(--ink-3);
+  font-weight: 500;
+  font-feature-settings: "smcp";
+}
+
+code, kbd, samp, pre, .ds-mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+code {
+  background: var(--paper-2);
+  padding: 0.1em 0.35em;
+  border-radius: var(--r-sm);
+  border: var(--border-hairline);
+}
+
+pre {
+  background: var(--paper-2);
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--r-md);
+  border: var(--border-hairline);
+  overflow-x: auto;
+  line-height: var(--lh-normal);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--ink);
+  border-left: 2px solid var(--sage-300);
+  padding: var(--sp-2) var(--sp-5);
+  margin: var(--sp-6) 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: var(--sp-7) 0;
+}
+
+hr.ornament {
+  border: 0;
+  text-align: center;
+  margin: var(--sp-7) 0;
+}
+hr.ornament::after {
+  content: "❦";
+  color: var(--ink-3);
+  font-family: var(--font-display);
+  font-size: 18px;
+}
+
+::selection {
+  background: var(--sage-200);
+  color: var(--ink);
+}
+
+/* ——— oldstyle figures in display contexts ——— */
+.display-1, h1, h2, blockquote, .lede {
+  font-feature-settings: "onum", "liga", "kern";
+}
